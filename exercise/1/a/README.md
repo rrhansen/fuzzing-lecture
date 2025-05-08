@@ -32,7 +32,7 @@ cd /exercise/1/a
 ```
 The contents are a source file, a directory containing a test case and this README. The C source file can be compiled running `Clang` with the following command:
 ```bash
-clang -o target main.c
+clang -Wno-implicit-function-declaration -o target main.c
 ```
 
 The compiled application is called `target` and can be executed by running the following command:
