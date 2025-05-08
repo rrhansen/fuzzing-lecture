@@ -6,16 +6,18 @@ We base this tutorial on the first exercise located in `/exercise/1/a`.
 
 > **TLDR**: Compile application and run AFL++
 >```bash
->clang -o target main.c
+>clang -Wno-implicit-function-declaration -o target main.c
 >afl-fuzz -n -i input_directory -o output_directory -- /path/to/application
 >```
 
 ## Prerequisites
-We make sure that the docker container is running if not the container can be launched
+We make sure that the docker container is running if the container can
+not be launched
 by running the script `build-docker.sh` (if this does not work, try running the `.bat` instead.
 
 ## Compiling and Running the Application
-The source code is provided, but in order to do a correct blackbox fuzz test, we must **avoid** viewing the content.
+The source code is provided, but in order to do a correct blackbox
+fuzz test, we fuzz **without** having to view the content.
 > Navigating in a terminal can be difficult without former experience here is some helpful commands:
 > - `pwd` - print working directory
 > - `cd` - change directory
@@ -65,14 +67,18 @@ afl-fuzz -i input_directory/ -o output_directory -- /exercise/1/a/target
 > - Whitebox -- source code, specification and documentation are available
 > - Greybox -- something in between (widely discussed in the fuzz testing community)
 
-As we discovered when running AFL++ an error was thrown, and we were not able to start the fuzz testing. We solve this by adding the `-n` option, which enable fuzz testing without instrumentation -- blackbox. We start the fuzz test without instrumentation by running the following command:
+As we discovered when running AFL++ an error was thrown and we were
+not able to start the fuzz testing. We solve this by adding the `-n`
+option, which enables fuzz testing without instrumentation, i.e.,
+blackbox fuzzing. We start the fuzz test without instrumentation by
+running the following command:
 
 ```bash
 afl-fuzz -n -i input_directory -o output_directory -- /exercise/1/a/target
 ```
 
-We are then met by the status screen which displays much interesting information,
-which includes run time, number of found crashes, number execution per second and much more.
+We are then met by the status screen which displays a lot of interesting information,
+including run time, number of crashes found, number executions per second and much more.
 The number of total crashes is rapidly increasing, whereof each is a test case which makes the target application crash.
 In order to stop the fuzz test simply enter `Ctrl-c` in the terminal.
 
