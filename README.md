@@ -1,7 +1,11 @@
 # Fuzz Testing Exercises
-This repository is made as a supplement to the fuzz testing lectures held by Lars Bo Frydenskov,
-Research Assistant at Aalborg University. 
-In this repository, you find the slides used in the most recently held lecture and related exercises.
+This repository is made as a supplement to the fuzz testing lectures
+held at Aalborg University. In this repository, you will find the
+slides of the original Fuzzing lecture given by Lars Bo Frydenskov as
+well as tutorial and a number of related hands-on fuzzing exercises.
+
+The original repository was made by Lars Bo Frydenskov as part of his
+duties as a Research Assistant at Aalborg University.
 
 ## Cloning the Repository
 In order to clone the repository you can type the following command if you have `git` installed on your system. 
