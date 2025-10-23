@@ -1,4 +1,5 @@
 #!/bin/bash
-docker rm -f aflplusplus-exercise
-docker build -t aflplusplus-exercise .
-docker run --rm --name=aflplusplus-exercise -it aflplusplus-exercise
+# NOTE: use ":latest" for AMD and ":dev" for AMD/ARM
+docker rm -f aflplusplus/aflplusplus:dev
+docker build -t aflplusplus/aflplusplus:dev .
+docker run --rm --name=aflplusplus-exercise -it aflplusplus/aflplusplus:dev

@@ -4,8 +4,9 @@ held at Aalborg University. In this repository, you will find the
 slides of the original Fuzzing lecture given by Lars Bo Frydenskov as
 well as tutorial and a number of related hands-on fuzzing exercises.
 
-The original repository was made by Lars Bo Frydenskov as part of his
-duties as a Research Assistant at Aalborg University.
+The original repository was made by Lars Bo Frydenskov, as part of his
+duties as a Research Assistant at Aalborg University, with
+contributions bt Danny Bøgsted Poulsen and René Rydhof Hansen.
 
 ## Cloning the Repository
 In order to clone the repository you can type the following command if you have `git` installed on your system. 
@@ -21,3 +22,8 @@ Simply be sure to have Docker installed, and then run the build script.
 Then a container is spawned with a bash terminal to interact with the container.
 The image used is pulled from `aflplusplus/afplusplus` from Docker Hub.
 For more information, take a look at [AFL++ github repository](https://github.com/AFLplusplus/AFLplusplus).
+
+
+# Acknowledgements
+
+Thanks to Berkan Kütük (CYB3) for bugfixes.
